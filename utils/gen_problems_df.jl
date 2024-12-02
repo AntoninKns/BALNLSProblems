@@ -1,4 +1,3 @@
-using Base: Float32
 using BundleAdjustmentModels, DataFrames, JLD2
 
 include("../src/BundleAdjustmentProblemsList.jl")
