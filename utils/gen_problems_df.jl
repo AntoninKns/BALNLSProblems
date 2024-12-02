@@ -7,7 +7,8 @@ for probs_symbol ∈ ba_groups
   problems = eval(probs_symbol)
   group = string(probs_symbol)
   for name in problems
-    model = BundleAdjustmentModel(name, group, T = Float32)
+    @info "Problem $name of the group $group."
+    model = BundleAdjustmentModel(name)
     push!(df, (model.meta.name, group, model.nls_meta.nequ, model.meta.nvar, model.nls_meta.nnzj))
   end
 end
